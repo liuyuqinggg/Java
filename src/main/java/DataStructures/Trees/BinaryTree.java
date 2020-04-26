@@ -6,6 +6,8 @@ package DataStructures.Trees;
  */
 
 
+import org.junit.Test;
+
 import java.util.Random;
 
 /**
@@ -282,21 +284,25 @@ public class BinaryTree {
         }
     }
 
-
-    public static void main(String[] args) {
+    @Test
+    public void test(){
         BinaryTree binaryTree = new BinaryTree();
         Random random = new Random();
 
-        for (int i = 0; i < 10; i++) {
-            int i1 = random.nextInt(50);
+        for (int i = 0; i < 100000; i++) {
+            int i1 = random.nextInt(50000);
             System.out.print(i1 + " ");
-            binaryTree.put(random.nextInt(50));
+            binaryTree.put(i1);
         }
         System.out.println();
 
-        binaryTree.preOrder(binaryTree.getRoot());
+//      binaryTree.preOrder(binaryTree.getRoot());
 
+        System.out.println();
+        binaryTree.inOrder(binaryTree.getRoot());
 
-
+        System.out.println();
+//        binaryTree.postOrder(binaryTree.getRoot());
     }
+
 }
