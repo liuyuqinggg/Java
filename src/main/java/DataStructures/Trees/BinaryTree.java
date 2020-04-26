@@ -6,6 +6,8 @@ package DataStructures.Trees;
  */
 
 
+import java.util.Random;
+
 /**
  * A binary tree is a data structure in which an element
  * has two successors(children). The left child is usually
@@ -278,5 +280,23 @@ public class BinaryTree {
             postOrder(localRoot.right);
             System.out.print(localRoot.data + " ");
         }
+    }
+
+
+    public static void main(String[] args) {
+        BinaryTree binaryTree = new BinaryTree();
+        Random random = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            int i1 = random.nextInt(50);
+            System.out.print(i1 + " ");
+            binaryTree.put(random.nextInt(50));
+        }
+        System.out.println();
+
+        binaryTree.preOrder(binaryTree.getRoot());
+
+
+
     }
 }
