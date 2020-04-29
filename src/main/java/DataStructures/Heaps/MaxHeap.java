@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Heap tree where a node's key is higher than or equal to its parent's and lower than or equal
+ * Heap tree where a node's key is lower than or equal to its parent's and higher than or equal
  * to its children's.
  *
  * @author Nicolas Renard
